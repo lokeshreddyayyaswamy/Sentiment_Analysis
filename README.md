@@ -1,40 +1,58 @@
-Twitter Sentiment Analysis
-A Python project that performs sentiment analysis on Twitter data, classifying tweets into positive, negative, or neutral categories using various machine learning and deep learning models.
+<div align="center">
+<h1 align="center">📊 Twitter Sentiment Analysis 📊</h1>
+<p align="center">
+Classifying tweets into positive, negative, or neutral categories using Machine Learning and Deep Learning.
+</p>
+</div>
 
-This repository demonstrates the process of text preprocessing, feature extraction (TF-IDF), and model training for a multi-class classification task.
+<div align="center">
 
-Features
-Text Preprocessing: Cleans raw tweet data by removing URLs, mentions, hashtags, special characters, and stop words.
+</div>
 
-Feature Extraction: Uses TF-IDF to convert cleaned text into a numerical format suitable for machine learning.
+This repository contains a Python project that performs sentiment analysis on Twitter data. It demonstrates the complete workflow from raw text preprocessing to training and evaluating various classification models.
 
-Model Comparison: Implements and evaluates several different classification models to compare their performance.
+✨ Features
+🧹 Text Preprocessing: Cleans raw tweet data by removing URLs, mentions, hashtags, special characters, and stopwords.
 
-Models Implemented
-This project trains and compares the following models:
+🔢 Feature Extraction: Uses TF-IDF to convert cleaned text into a numerical format suitable for machine learning.
 
-Traditional Machine Learning:
+🤖 Model Comparison: Implements and evaluates several different classification models to compare their performance.
+
+🚀 Models Implemented & Performance
+This project trains and compares the following models. The accuracy scores below are based on the test set and may vary slightly on different runs.
+
+Model
+
+Test Accuracy
 
 Multinomial Naive Bayes
 
-Complement Naive Bayes (with hyperparameter tuning via GridSearchCV)
+~90.6%
 
-Deep Learning (using TensorFlow/Keras):
+Complement Naive Bayes
 
-Simple Recurrent Neural Network (RNN)
+~90.6%
 
-Long Short-Term Memory (LSTM)
+Simple RNN
 
-Bidirectional LSTM (Bi-LSTM)
+~95.3%
 
-Dataset
+LSTM
+
+~95.7%
+
+Bidirectional LSTM
+
+~95.8%
+
+💾 Dataset
 This project uses the "Twitter Data" dataset, which can be found on Kaggle.
 
 Source: Kaggle - Twitter Sentiment Analysis
 
 Important: To run this project, please download the Twitter_Data.csv file from the link above and place it in the root directory of this project.
 
-Getting Started
+⚙️ Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine.
 
 Prerequisites
@@ -63,14 +81,11 @@ Install the required packages:
 pip install -r requirements.txt
 
 Download NLTK data:
-Run the following commands in a Python interpreter to download the necessary NLTK models:
+Run the following command in your terminal to download the necessary NLTK models:
 
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
+python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt'); nltk.download('wordnet')"
 
-Usage
+▶️ Usage
 After setting up the environment and placing Twitter_Data.csv in the root folder, you need to update the file path in the script.
 
 Open sentiment_analysis.py.
@@ -89,5 +104,5 @@ python sentiment_analysis.py
 
 The script will then preprocess the data, train each model, and print the accuracy and classification report for each one.
 
-License
+📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
